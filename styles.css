@@ -166,7 +166,7 @@ body {
 
 .hint {
   position: absolute;
-  top: 35.5%;
+  top: 34.5%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 16px;
@@ -257,7 +257,7 @@ body {
    ==================================== */
 .open-area {
   position: absolute;
-  bottom: 680px;
+  bottom: 580px;
   left: 0;
   width: 100%;
   display: flex;
@@ -347,4 +347,5 @@ body {
   font-size: 15px;
   padding: 15px 41px;
   }
+
 }
