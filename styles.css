@@ -234,7 +234,7 @@ body {
 .letter {
   position: relative;
   width: 120vw;
-  max-width: 550px;
+  max-width: 580px;
   max-height: none;
   overflow-y: auto;
   padding-bottom: 70px;
