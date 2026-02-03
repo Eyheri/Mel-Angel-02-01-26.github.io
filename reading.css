@@ -1,0 +1,318 @@
+body {
+  margin: 8;
+  font-family: "Times New Roman", serif;
+  background: #beaa6d;
+}
+
+/*====================================
+  ESCENA PRINCIPAL
+   ==================================== */
+.scene {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/*====================================
+  PORTADA
+   ==================================== */
+/* CONTENEDOR PORTADA */
+.cover {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BLOQUE CON FONDO */
+.cover-box {
+  background: #764c31;
+  padding: 60px 60px;
+  border-radius: 6px;
+
+  box-shadow:
+    0 0 70px rgba(0,0,0,1),
+    inset 0 0 70px rgba(0,0,0,0.1);
+
+  text-align: center;
+  max-width: 420px;
+}
+
+/* ====================================
+  TITULOS Y TEXTOS
+   ==================================== */
+
+/* PORTADA */
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* AJUSTES TEXTO */
+.cover-title {
+  margin-top: 12px;
+  color: #ffffff;
+}
+
+.cover-subtitle {
+  margin-top: 12px;
+  color: #9b9898;
+  font-size: 18px;
+}
+
+.cover-two {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title-two {
+  margin-top: 3px;
+}
+.subtitle-two {
+  margin-top: 0.1px;
+  color: #494949;
+}
+
+/* ====================================
+  VINIL PRINCIPAL
+   ==================================== */
+.vinyl-cover img {
+  width: 290px;
+  animation: none;
+}
+
+.vinyl-cover.playing img {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/*====================================
+  VINIL DE HOJAS
+   ==================================== */
+.vinyl-mini {
+  position: absolute;
+  bottom: -30px;
+  width: 144px;
+  height: 144px;
+
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  background: none;
+}
+
+.vinyl-mini img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.vinyl-mini.playing img {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ====================================
+  HOJAS DEL LIBRO
+   ==================================== */
+/* CONTENEDOR DE HOJAS */
+.pages {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* HOJA */
+.page {
+  width: 85%;
+  max-width: 800px;
+  background: #b69d7e;
+  padding: 40px;
+  position: relative;
+
+  box-shadow:
+    0 0 25px rgba(0,0,0,0.35),
+    inset 0 0 15px rgba(0,0,0,0.15);
+}
+
+.page.right { align-self: flex-end; }
+.page.left  { align-self: flex-start; }
+
+
+.page.right .vinyl-mini {
+  right: 30px;
+  left: auto;
+}
+
+.page.left .vinyl-mini {
+  left: 30px;
+  right: auto;
+}
+
+/*====================================
+  CONTENIDO DE HOJAS
+  ==================================== */
+
+/* TEXTO */
+.page-content p {
+  font-size: 12pt;
+  line-height: 1.6;
+}
+
+/*=====================================
+  CONTROLES DEL REPRODUCTOR
+  ==================================== */
+.player-controls {
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.player-controls button {
+  background: none;
+  border: 2px solid #9b9898;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.player-controls button:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+/*=====================================
+  ANIMACION DE NOTAS MUSICALES
+  ==================================== */
+.music-note {
+  position: fixed;
+  font-size: 50px;
+  color: rgba(255,255,255,0.7);
+  animation: floatNote 4s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatNote {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-400px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/*=====================================
+  IMAGENES DENTRO DEL TEXTO
+  ==================================== */
+.imagenes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.imagenes img {
+  max-width: 300px;  
+  height: auto;
+  border-radius: 8px;
+}
+
+#img-Besho img {
+  max-width: 300px;
+  border-radius: 0px;
+}
+
+#img-PrimerFoto img {
+  max-width: 190px;
+  border-radius: 30px;
+}
+
+#img-CatBlack img {
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+/*=====================================
+  TEXTO DE CANCIÓN REPRODUCIÉNDOSE
+  ==================================== */
+.now-playing {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #cfcfcf;
+  font-style: italic;
+  transition: opacity 0.4s ease;
+}
+
+/*=====================================
+  BLOQUE DEDICATORIA FINAL
+=====================================*/
+
+/* ===== BLOQUE DEDICATORIA ===== */
+.dedication {
+  display: flex;
+  justify-content: center;
+  margin: 140px 0 180px;
+}
+
+/* EL BLOQUE QUE SE AJUSTA */
+.dedication-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  background: #764c31;
+  padding: 40px 20px;
+  border-radius: 6px;
+
+  box-shadow:
+    0 0 60px rgba(0,0,0,0.5),
+    inset 0 0 30px rgba(0,0,0,0.15);
+}
+
+/* TEXTO */
+.dedication-text {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #f5f5f5;
+  white-space: nowrap;
+}
+
+/* VINIL */
+.dedication-vinyl img {
+  width: 140px;
+  height: auto;
+  border-radius: 100%;
+}
+
+.dedication .vinyl-mini {
+  position: static;
+}
+
+
+
