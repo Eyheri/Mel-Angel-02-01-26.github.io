@@ -286,8 +286,8 @@ body {
   gap: 60px;
 
   background: #764c31;
-  padding: 40px 20px;
-  border-radius: 6px;
+  padding: 30px 40px;
+  border-radius: 10px;
 
   box-shadow:
     0 0 60px rgba(0,0,0,0.5),
@@ -313,6 +313,7 @@ body {
 .dedication .vinyl-mini {
   position: static;
 }
+
 
 
 
